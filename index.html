@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab-2.4.1 / Formularios</title>
+</head>
+
+<body>
+    <h1>Retro Formulary</h1>
+    <main>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombre">
+                        <span>Nombre</span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+                    </label>
+
+                    <label for="apellido">
+                        <span>Apellido</span>
+                        <input type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido" required>
+                    </label>
+
+                </div>
+                <div>
+                    <label for="edad">
+                        <span>Edad</span>
+                        <input type="number" id="edad" name="edad" min="18" max="110" placeholder="Edad" required>
+                    </label>
+
+                    <label for="email">
+                        <span>Email</span>
+                        <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
+                    </label>
+
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Mensaje</legend>
+                <label for="asunto">
+                    <span>Asunto</span>
+                    <input type="text" id="asunto" name="asunto" placeholder="Asunto del comentario" required>
+                </label>
+
+                <label for="comentario">
+                    <span>Comentario</span>
+                    <textarea name="comentario" id="comentario" maxlength="150" placeholder="Escribe tu comentario"
+                    oninput="this.nextElementSibling.value=`${this.value.length}/150`" required></textarea>
+                    <output for="comentario" class="contador">0/150 caracteres</output>
+                </label>
+            </fieldset>
+            <button type="submit">Pulsar para enviar</button>
+        </form>
+    </main>
+
+
+</body>
+
+</html>
